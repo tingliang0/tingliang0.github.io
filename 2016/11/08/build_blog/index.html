@@ -100,7 +100,7 @@ hexoHexo 是一个基于nodejs的静态博客网站生成器，作者是来自�
 1$ npm install hexo -g
 创建blog123$ hexo init blog$ cd blog$ npm install
 测试是否创建成功hex">
-<meta property="og:updated_time" content="2016-11-08T09:49:01.145Z">
+<meta property="og:updated_time" content="2016-11-09T03:23:08.278Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建静态博客">
 <meta name="twitter:description" content="本文记录了使用hexo、NexT、github搭建过程。
@@ -302,7 +302,7 @@ hexoHexo 是一个基于nodejs的静态博客网站生成器，作者是来自�
 <h2 id="测试是否创建成功"><a href="#测试是否创建成功" class="headerlink" title="测试是否创建成功"></a>测试是否创建成功</h2><p>hexo创建的项目默认的访问地址是: <code>http://127.0.0.1:4000/</code>，因此只需要启动hexo项目，访问这个路径就知道是否创建成功了。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> blog</div><div class="line">$ hexo server</div><div class="line"><span class="comment"># or</span></div><div class="line">$ hexo s</div></pre></td></tr></table></figure>
 <h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new hello</div></pre></td></tr></table></figure>
-<p>命令成功执行后，默认会在<code>source/_posts/</code>目录下，生成一个<code>hello.md</code>，后续文章的内容都写在这个markdown文章里。如果想预览新加的文章，在浏览器里重新刷新页面即可。</p>
+<p>命令成功执行后，默认会在<code>source/_posts/</code>目录下，生成一个<code>hello.md</code>，后续文章的内容都写在这个markdown文件里。如果想预览新加的文章，在浏览器里重新刷新页面即可。</p>
 <h1 id="NexT"><a href="#NexT" class="headerlink" title="NexT"></a>NexT</h1><p>Hexo创建的项目，默认使用的主题是<code>landscape</code>，而本人更喜欢<a href="http://notes.iissnan.com" target="_blank" rel="external">NexT</a>这个简洁明了的主题。下面演示如何在Hexo项目里替换主题。</p>
 <h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>先把NexT这个主题从GitHub上拉到本地项目里</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> blog</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
@@ -316,7 +316,7 @@ hexoHexo 是一个基于nodejs的静态博客网站生成器，作者是来自�
 <p>命令执行后，新创建的<code>public</code>目录就是我们最终要发布到github上面的博客。</p>
 <h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><p>由于将hexo创建的项目发布到github上部署是一个很通用的需求。hexo在部署方面做得足够简单了。只需在<code>_config.yml</code>稍微配置既可。 <code>repo</code>的值要改成你自己的github地址。</p>
 <p>首先，安装hexo针对git的发布工具<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
-<p>然后在_config.yml进行配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">type: git</div><div class="line">repo: https://github.com/yourname/blog.git</div></pre></td></tr></table></figure></p>
+<p>然后在_config.yml进行配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">   type: git</div><div class="line">   repo: https://github.com/yourname/blog.git</div></pre></td></tr></table></figure></p>
 <p>配置后，执行下面命令，即可发布到github上。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a><br><a href="http://notes.iissnan.com/" target="_blank" rel="external">NexT</a></p>
 
@@ -346,6 +346,20 @@ hexoHexo 是一个基于nodejs的静态博客网站生成器，作者是来自�
         </div>
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/09/git/" rel="prev" title="git日常使用">
+                git日常使用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -410,7 +424,7 @@ hexoHexo 是一个基于nodejs的静态博客网站生成器，作者是来自�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -420,7 +434,7 @@ hexoHexo 是一个基于nodejs的静态博客网站生成器，作者是来自�
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
